@@ -47,3 +47,4 @@ zipp==0.5.1
 zope.interface==4.4.3
 dj-database-url
 Babel==2.6.0
+psycopg2
