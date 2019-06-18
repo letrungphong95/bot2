@@ -46,6 +46,7 @@ ALLOWED_HOSTS = [
     "localhost",
     "0.0.0.0",
     "127.0.0.1",
+    "demo-bot2.herokuapp.com"
 ]
 
 # Application definition
