@@ -42,10 +42,7 @@ STATICFILES_DIRS = (
 DEBUG = True
 
 # ALLOWED_HOSTS = [os.environ['DJANGO_BOT2_ALLOWED_HOSTS']]
-ALLOWED_HOSTS = [
-    "localhost",
-    "0.0.0.0",
-    "127.0.0.1",
+ALLOWED_HOSTS = [   
     "demo-bot2.herokuapp.com"
 ]
 
@@ -63,6 +60,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
