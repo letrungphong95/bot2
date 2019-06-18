@@ -151,7 +151,7 @@ CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "asgi_redis.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [("localhost", 6379)], 
+            "hosts": [("demo-bot2.herokuapp.com", 6379)], 
         },
         "ROUTING": "echo.routing.channel_routing",
     },
