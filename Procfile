@@ -1,1 +1,2 @@
-web: gunicorn odb.wsgi --log-file - worker: python worker.py
+web: gunicorn odb.wsgi --log-file - 
+worker: python manage.py runworker -v2
