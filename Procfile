@@ -1,2 +1,2 @@
-web: gunicorn odb.wsgi --log-file - 
+web: gunicorn bot2.wsgi --log-file - 
 
