@@ -1,3 +1,3 @@
-web: daphne bot2.asgi:channel_layer --port $PORT --bind 0.0.0.0 -v2
+web: gunicorn bootcamp.wsgi --log-file -
 worker: python manage.py runworker -v2
 
