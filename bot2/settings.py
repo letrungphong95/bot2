@@ -35,7 +35,7 @@ ALLOWED_HOST = [
 ]
 # ALLOWED_HOSTS = ['*']
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Application definition
