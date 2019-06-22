@@ -15,9 +15,9 @@ chatsock.onmessage = function(message){
 
     var tbody = $('#container_msg');
     if(data.source == "BOT"){
-        tbody.append('<div class="bot">' + data.text + '</div>');
+        tbody.append('<div class="bubble bubble-left">' + data.text + '</div>');
     }else if(data.source == "USER"){
-        tbody.append('<div class="me">'  + data.text + '</div>');
+        tbody.append('<div class="bubble bubble-right">' + data.text + '</div>');
     }else{
         console.log("invalid data source...")
     }

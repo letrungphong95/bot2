@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
-import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,18 +24,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '12345'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = False
+DEBUG = True
 
 # ALLOWED_HOSTS = [os.environ['DJANGO_BOT2_ALLOWED_HOSTS']]
-# ALLOWED_HOST = [
-#     'localhost',
-#     '127.0.0.1',
-#     '0.0.0.0'
-# ]
-ALLOWED_HOSTS = ['*']
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+ALLOWED_HOST = [
+    'localhost',
+    '127.0.0.1',
+    '0.0.0.0'
+]
+# ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -86,15 +82,13 @@ WSGI_APPLICATION = 'bot2.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -139,7 +133,7 @@ CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "asgi_redis.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [os.environ.get('REDISCLOUD_URL', 'redis://localhost:6379')],
+            "hosts": [("localhost", 6379)], 
         },
         "ROUTING": "echo.routing.channel_routing",
     },
