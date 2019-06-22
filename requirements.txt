@@ -38,7 +38,6 @@ py-translate==1.0.3
 PyHamcrest==1.9.0
 pypiwin32==223
 pytz==2019.1
-pypiwin32==224
 PyYAML==5.1.1
 redis==2.10.6
 requests==2.22.0
