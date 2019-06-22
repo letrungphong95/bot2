@@ -20,18 +20,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = os.environ['DJANGO_BOT2_SECRET_KEY'] 
+# SECRET_KEY = os.environ['DJANGO_BOT2_SECRET_KEY']
 SECRET_KEY = '12345'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 # ALLOWED_HOSTS = [os.environ['DJANGO_BOT2_ALLOWED_HOSTS']]
-ALLOWED_HOST = [
-    'localhost',
-    '127.0.0.1',
-    '0.0.0.0'
-]
+ALLOWED_HOST = ['phongle.pythonanywhere.com']
 # ALLOWED_HOSTS = ['*']
 
 
@@ -133,7 +129,7 @@ CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "asgi_redis.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [("localhost", 6379)], 
+            "hosts": [("localhost", 6379)],
         },
         "ROUTING": "echo.routing.channel_routing",
     },
