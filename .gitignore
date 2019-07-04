@@ -9,3 +9,4 @@ __pycache__/
 *.bak
 /scripts
 venv/
+rasa/.ipynb_checkpoints

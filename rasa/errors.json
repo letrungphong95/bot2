@@ -1,0 +1,18 @@
+[
+    {
+        "text": "Thanks",
+        "intent": "thanks",
+        "intent_prediction": {
+            "name": "bye",
+            "confidence": 0.43987883648506176
+        }
+    },
+    {
+        "text": "Thank you so much",
+        "intent": "thanks",
+        "intent_prediction": {
+            "name": "bye",
+            "confidence": 0.35792707366419113
+        }
+    }
+]
